@@ -1,0 +1,28 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I am Seif.</h1>
+    <p class="author__body">Software Engineer, Backend Developer.</p> 
+</div>
+<section>
+    <div class="articles-header">
+        <h2 class="articles__heading">Latest posts</h2>
+    </div>
+   
+    <ul class="articles__ul">
+        <% data.forEach(element => { %>
+        <li>
+            <a href="/post/<%= element._id %>">
+                <%= element.title.length > 40 ? element.title.substring(0, 40) + '...' : element.title %>
+            </a>
+            <span class="articles-list__date"><%= element.createdAt.toDateString()+" " + element.createdAt.toTimeString() %></span>
+        </li>
+        <% }) %>
+    </ul>
+    <% if (hasNextPage) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; view older posts </a>
+     
+    <% } %>
+    <% if (hasPreviousPage) { %>
+        <a href="/?page=<%= previousPage %>" class="pagination">&gt; view newer posts </a>
+     
+    <% } %>
+</section>

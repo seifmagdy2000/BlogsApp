@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Posts</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- Link to your external stylesheet -->
+</head>
+<body>
+  <section class="admin-section">
+    <header class="admin-header">
+      <h2>Manage Posts</h2>
+      <a href="/admin/addPost" class="button primary-btn">+ Add New Post</a>
+      <a href="/admin/logout" class="logout-link">Logout</a>
+    </header>
+
+    <ul class="admin-post-list">
+      <% data.forEach(post => { %>
+        <li class="admin-post-item">
+          <div class="post-details">
+            <a href="/post/<%= post._id %>" class="post-title">
+              <%= post.title %>
+            </a>
+            <span class="post-date">Published on: <%= new Date(post.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) %></span>
+            <span class="post-date">Tags: <%= post.tags.join(', ') %></span>
+          </div>
+    
+          <div class="admin-actions">
+            <a href="/admin/editPost/<%= post._id %>" class="btn edit-btn">Edit</a>
+    
+            <form action="/admin/deletePost/<%= post._id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn delete-btn">Delete</button>
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+    
+    <!-- Pagination UI -->
+    <nav class="pagination">
+      <ul>
+        <% if (currentPage > 1) { %>
+          <li><a href="?page=<%= currentPage - 1 %>" class="btn">Previous</a></li>
+        <% } %>
+    
+        <% for (let i = 1; i <= totalPages; i++) { %>
+          <li class="<%= i === currentPage ? 'active' : '' %>">
+            <a href="?page=<%= i %>" class="btn"><%= i %></a>
+          </li>
+        <% } %>
+    
+        <% if (currentPage < totalPages) { %>
+          <li><a href="?page=<%= currentPage + 1 %>" class="btn">Next</a></li>
+        <% } %>
+      </ul>
+    </nav>
+    
+  </section>
+</body>
+</html>

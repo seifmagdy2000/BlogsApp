@@ -1,0 +1,650 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Updated to a more modern font */
+    color: #333;
+    background-color: #f8f9fa; /* Slightly lighter background */
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #FFD700; /* Golden background */
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px; /* Slightly increased padding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+.header__logo {
+    font-size: 1.8em; /* Increased logo size */
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.header__logo:hover {
+    color: #b8860b; /* Added hover effect */
+}
+
+.header__nav {
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center; /* Centers the navigation items */
+}
+
+.header__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Used gap for spacing */
+}
+
+.header__nav li {
+    margin: 0;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: #fff;
+    background-color: #b8860b; /* Darker golden on hover */
+}
+
+.header__button {
+    display: flex;
+    align-items: center;
+}
+
+.searchBtn {
+    background-color: #fff;
+    border: 2px solid #b8860b;
+    padding: 10px 20px; /* Increased padding */
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    border-radius: 25px; /* Fully rounded button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.searchBtn:hover {
+    background-color: #b8860b; /* Darker golden on hover */
+    color: #fff;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.author {
+    background-color: #FFD700; /* Golden background */
+    color: #333;
+    text-align: center;
+    padding: 30px 20px; /* Increased padding */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.author__heading {
+    font-size: 2.2em; /* Slightly larger heading */
+    margin: 0;
+    font-weight: bold;
+}
+
+.author__body {
+    font-size: 1.2em;
+    margin: 15px 0 0;
+}
+
+section {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+    margin-bottom: 20px; /* Added bottom margin */
+}
+
+.articles__heading {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700; /* Golden underline */
+    padding-bottom: 15px; /* Increased padding */
+}
+
+.articles__ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.articles__ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.articles__ul li:last-child {
+    border-bottom: none;
+}
+
+.articles__ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.articles__ul a:hover {
+    color: #FFD700; /* Golden color on hover */
+}
+
+.articles-list__date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.pagination {
+    display: inline-block; /* Changed from block for inline styling */
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #333;
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 25px; /* Fully rounded pagination button */
+    transition: all 0.3s ease;
+}
+
+.pagination:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Latest Posts */
+.latest-post {
+    display: flex;
+    justify-content: space-between; /* Distributes space between title and date */
+    align-items: center; /* Centers items vertically */
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.latest-post__title {
+    font-size: 1.3em; /* Slightly larger title */
+    margin: 0;
+}
+
+.latest-post__date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px; /* Adjusted padding */
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap for mobile */
+    }
+
+    .header__button {
+        margin-top: 15px;
+    }
+
+    .author__heading {
+        font-size: 1.8em;
+    }
+
+    .author__body {
+        font-size: 1em;
+    }
+
+    .articles__heading {
+        font-size: 1.5em;
+    }
+
+    .articles__ul a {
+        font-size: 1em;
+    }
+
+    .pagination {
+        font-size: 0.9em;
+        padding: 8px 15px; /* Adjusted padding */
+    }
+
+    .blogDetails {
+        padding: 20px; /* Adjusted padding */
+        width: 100%; /* Adjusted width */
+    }
+
+    .blogDetails h1 {
+        font-size: 1.6em; /* Reduced font size */
+    }
+
+    .blogDetails h2 {
+        font-size: 1em; /* Adjusted font size */
+    }
+
+    .blogDetails h4 {
+        font-size: 0.8em; /* Adjusted size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        font-size: 1.4em; /* Adjusted font size */
+    }
+
+    .header__nav a {
+        font-size: 0.9em;
+    }
+
+    .searchBtn {
+        font-size: 0.9em;
+    }
+
+    .author__heading {
+        font-size: 1.4em; /* Adjusted font size */
+    }
+
+    .author__body {
+        font-size: 0.9em; /* Adjusted font size */
+    }
+
+    .articles__heading {
+        font-size: 1.3em; /* Adjusted font size */
+    }
+
+    .articles__ul a {
+        font-size: 0.9em; /* Adjusted font size */
+    }
+
+    .pagination {
+        font-size: 0.8em;
+        padding: 8px 12px; /* Adjusted padding */
+    }
+
+    .blogDetails {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .blogDetails h1 {
+        font-size: 1.4em; /* Adjusted font size */
+    }
+
+    .blogDetails h2 {
+        font-size: 0.9em; /* Adjusted font size */
+    }
+
+    .blogDetails h4 {
+        font-size: 0.7em; /* Adjusted size */
+    }
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; /* Remove default margins */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.main {
+    flex: 1; /* Pushes footer to the bottom */
+}
+
+.footer {
+    background-color: #FFD700; /* Golden background */
+    color: #333;
+    padding: 15px 20px; /* Adjusted padding */
+    text-align: left;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Larger shadow */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.search-input {
+    padding: 10px; /* Increased padding */
+    font-size: 1em;
+    border: 2px solid #ddd; /* Slightly thicker border */
+    border-radius: 20px; /* More rounded corners */
+    margin-right: 8px; /* Increased space between input and button */
+    flex: 1; /* Make input take up available space */
+}
+
+.searchBtn:hover {
+    background-color: #b8860b; /* Darker golden on hover */
+    color: #fff;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+/* Login Form Styles */
+.login-form {
+    background-color: #fff; /* White background for the form */
+    padding: 20px 30px; /* Padding around the form */
+    margin: 50px auto; /* Center the form with auto margin */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+    max-width: 400px; /* Limit the form width */
+}
+
+.login-labels {
+    font-size: 1.1em; /* Slightly larger font for labels */
+    color: #333; /* Matching text color */
+    margin-bottom: 10px; /* Space between label and input */
+    display: block; /* Ensure labels are on separate lines */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside the input fields */
+    margin: 10px 0 20px; /* Space between inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    font-size: 1em; /* Matching font size */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #FFD700; /* Golden border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.login-btn {
+    width: 100%; /* Full width button */
+    background-color: #FFD700; /* Golden background */
+    color: #333; /* Matching text color */
+    padding: 12px; /* Padding inside the button */
+    font-size: 1.2em; /* Slightly larger font for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.login-btn:hover {
+    background-color: #b8860b; /* Darker golden on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 15px 20px; /* Reduced padding on smaller screens */
+        margin: 30px auto; /* Adjust margin for better alignment */
+    }
+
+    .login-btn {
+        font-size: 1em; /* Adjust font size on smaller screens */
+        padding: 10px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 10px 15px; /* Further reduced padding on very small screens */
+        margin: 20px auto; /* Adjust margin for mobile devices */
+    }
+
+    .login-btn {
+        font-size: 0.9em; /* Adjust font size for mobile devices */
+        padding: 8px; /* Adjust padding */
+    }
+}.admin-section {
+  padding: 20px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #000; /* Black text for the title */
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+}
+
+.admin-post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff; /* White background for posts */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000; /* Black for post title */
+  text-decoration: none;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  color: #888; /* Gray for post date */
+  font-size: 14px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #000000; /* Green button for Edit */
+}
+
+.delete-btn {
+  background-color: #DC3545; /* Red button for Delete */
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+footer {
+  background-color: #FFD700; /* Yellow footer */
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+.primary-btn {
+    background-color: #FFD700; /* Gold color */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  /* Hover Effect */
+  .primary-btn:hover {
+    background-color: #000; /* Black background on hover */
+    color: #FFD700; /* Gold text on hover */
+    border: 2px solid #000; /* Black border on hover */
+  }
+  
+  /* Focus/Active State */
+  .primary-btn:focus, 
+  .primary-btn:active {
+    outline: none;
+    box-shadow: 0 0 5px #FFD700;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination .btn {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination .active .btn {
+    background-color: #6c757d;
+    pointer-events: none;
+  }
+  

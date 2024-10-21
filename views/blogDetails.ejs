@@ -1,0 +1,9 @@
+<div class="blogDetails">
+    <h1><%= data.title %></h1>
+    
+    <h2><%= data.body %></h3>
+        
+    <h4>last update at: <%= data.updatedAt.toDateString() +" " + data.updatedAt.toTimeString() %> </h4>
+    <h4>created at: <%= data.createdAt.toDateString()+" " + data.createdAt.toTimeString() %> </h4>
+    <h4>Tags: <%= data.tags %> </h4>
+</div>

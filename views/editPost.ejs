@@ -1,0 +1,43 @@
+
+<div class="container">
+    <h1>Add New Post</h1>
+
+    <form action="/admin/editPost/<%= post._id %>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="title">Post Title:</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="form-control"
+          required 
+          placeholder= <%= post.title %>
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="content">Post Content:</label>
+        <textarea
+          name="body"
+          id="body"
+          class="form-control"
+          rows="10"
+          required
+          placeholder="Write your post here..."
+        ><%= post.body %></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="tags">Tags (optional):</label>
+        <input
+          type="text"
+          name="tags"
+          id="tags"
+          class="form-control"
+          placeholder="Add tags, separated by commas"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Post</button>
+    </form>
+  </div>
